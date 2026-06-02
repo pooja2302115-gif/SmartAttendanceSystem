@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Attendance System</title>
+  <link rel="stylesheet" href= "{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="logo">
+    <span class="logo-icon"></span>
+    <span class="logo-text">SmartAttend</span>
+  </div>
+
+  <nav>
+    <a href="#">Help</a>
+    <a href="#">About</a>
+    <a href="#">Privacy</a>
+    <button class="support-btn">Contact Support</button>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <h1>Welcome to the Smart Attendance<br>System</h1>
+  <p class="subtitle">
+    Please select your role to proceed to the secure login. Access your
+    dashboard, schedules, and reports in one place.
+  </p>
+
+  <!-- CARDS -->
+  <section class="cards">
+
+    <!-- STUDENT -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Student">
+      <div class="card-body">
+        <span class="tag">🎓 STUDENT ACCESS</span>
+        <h2>Student Portal</h2>
+        <p>
+          View your daily attendance history, track your academic performance,
+          and receive real-time notifications for upcoming classes.
+        </p>
+        <a href="{{ url_for('student_login') }}" class="primary-btn">
+  Login as Student →
+</a>
+
+      </div>
+    </div>
+
+    <!-- TEACHER -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Teacher">
+      <div class="card-body">
+        <span class="tag">👨‍🏫 FACULTY ACCESS</span>
+        <h2>Teacher Portal</h2>
+        <p>
+          Mark daily attendance using smart tools, manage student academic
+          records, and generate comprehensive class performance reports.
+        </p>
+        <button class="primary-btn"><a href="{{ url_for('teacher_login') }}" style="color: aliceblue; text-decoration: none;">Login as Teacher →</a></button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- HELP LINKS -->
+  <div class="help">
+    <p>Need help accessing your account?</p>
+    <a href="#">Contact IT Desk</a>
+    <span>|</span>
+    <a href="#">Forgot Password</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 SmartAttend. All rights reserved. Professional Academic Portal.</p>
+  <div class="footer-links">
+    <a href="#">Terms of Service</a>
+    <a href="#">Cookie Policy</a>
+    <a href="#">Security</a>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

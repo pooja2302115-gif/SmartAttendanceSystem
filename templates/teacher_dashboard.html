@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='teacher_dashboard.css') }}">
+</head>
+<body>
+
+<div class="header">
+    <h2 id="welcome">Welcome</h2>
+    <button onclick="showProfile()">Profile</button>
+</div>
+
+<div class="top">
+    <input type="text" id="searchBox" placeholder="Search (Reg / Subject / Date)">
+    <button onclick="search()">Search</button>
+
+    <select id="classSelect"></select>
+    <input type="date" id="uploadDate">
+    <input type="file" id="imageInput">
+    <button onclick="uploadImage()">Upload</button>
+</div>
+
+<h3>Today Subjects</h3>
+<div id="subjects"></div>
+
+<h3>Attendance</h3>
+<div id="attendance"></div>
+
+<div id="result"></div>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <h3>Profile</h3>
+        <div id="profileData"></div>
+
+        <input type="password" id="newPass" placeholder="New Password">
+        <button onclick="changePassword()">Change Password</button>
+
+        <br><br>
+        <button onclick="logout()">Logout</button>
+        <button onclick="closeProfile()">Close</button>
+    </div>
+    
+</div>
+
+<h3>Timetable</h3>
+
+<table border="1" id="tt">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="{{ url_for('static', filename='teacher_dashboard.js') }}"></script>
+
+</body>
+</html>

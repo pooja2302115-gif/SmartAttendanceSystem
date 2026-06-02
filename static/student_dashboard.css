@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI';
+    background: #6c92f2;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+h1 {
+    color: #c1aacb;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgb(179, 218, 236);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.timetable {
+    width: 65%;
+}
+
+.attendance {
+    width: 35%;
+}
+
+table {
+    width: 100%;
+    border-spacing: 8px;
+}
+
+td {
+    background: #88b1d3;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.time {
+    background: #0b3c6f;
+    color: white;
+}
+
+.profile-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.staff {
+    margin-top: 20px;
+}
+
+#staff-box p {
+    background: #dbeafe;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 5px 0;
+}

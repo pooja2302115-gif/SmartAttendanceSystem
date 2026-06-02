@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student_dashboard.css') }}">
+</head>
+<body>
+
+<header>
+    <h2>Heaven College</h2>
+
+    <!-- ✅ ONLY ONE PROFILE -->
+    <div class="profile">
+        <img id="student-img">
+
+        <button class="profile-btn" onclick="toggleProfile()">👤 Profile</button>
+
+        <!-- ✅ DROPDOWN -->
+        <div id="profile-menu" class="profile-menu">
+            <p><b>Name:</b> <span id="p-name"></span></p>
+            <p><b>Reg:</b> <span id="p-reg"></span></p>
+            <p><b>Course:</b> <span id="p-course"></span></p>
+            <p><b>Year:</b> <span id="p-year"></span></p>
+
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+</header>
+
+<h1 id="welcome"></h1>
+
+<div class="main">
+
+    <div class="card timetable">
+        <h3>Weekly Curated Schedule</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+    
+    
+
+    <div class="card attendance">
+        <h3>Attendance Pulse</h3>
+        <div id="attendance-box"></div>
+    </div>
+</div>
+<div class="card staff">
+    <h3>Subject Staff</h3>
+    <div id="staff-box"></div>
+</div>
+
+<script src="{{ url_for('static', filename='student_dashboard.js') }}"></script>
+</body>
+</html>
